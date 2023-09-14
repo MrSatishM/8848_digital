@@ -1,0 +1,8 @@
+<!-- library_app/member_detail.html -->
+
+<h2>Member Outstanding Debt</h2>
+
+<p>Member Name: {{ member.name }}</p>
+<p>Outstanding Debt: Rs. {{ member_debt|floatformat:2 }}</p>
+
+<a href="{% url 'member_list' %}">Back to Member List</a>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Outstanding Debt</title>
+</head>
+<body>
+    <h1>Member Outstanding Debt</h1>
+
+    <p><strong>Member Name:</strong> {{ member.name }}</p>
+    
+    {% if member.outstanding_debt <= 500 %}
+        <p><strong>Outstanding Debt:</strong> Rs. {{ member.outstanding_debt }}</p>
+    {% else %}
+        <p><strong>Outstanding Debt:</strong> <span style="color: red;">Exceeds Rs. 500</span></p>
+    {% endif %}
+
+    <a href="{% url 'member_list' %}">Back to Member List</a>
+</body>
+</html>

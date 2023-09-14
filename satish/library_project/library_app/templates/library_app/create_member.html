@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Member</title>
+</head>
+<body>
+    <h1>Create a New Member</h1>
+    <a href="{% url 'create_book' %}">create book</a>
+    <a href="{% url 'member_list' %}">Member list</a>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Member</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issue Book</title>
+</head>
+<body>
+    <h1>Issue Book</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Issue Book</button>
+    </form>
+
+    {% if error_message %}
+    <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>

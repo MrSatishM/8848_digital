@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction List</title>
+</head>
+<body>
+    <h1>Transaction List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Book</th>
+                <th>Member</th>
+                <th>Date Issued</th>
+                <th>Returned</th>
+                <th>Rent Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.id }}</td>
+                <td>{{ transaction.book.title }}</td>
+                <td>{{ transaction.member.name }}</td>
+                <td>{{ transaction.date_issued }}</td>
+                <td>{{ transaction.returned }}</td>
+                <td>{{ transaction.rent_fee }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
